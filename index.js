@@ -98,13 +98,13 @@ const TabBar = ({ theme, activeCategory, onPress }) => {
   });
 };
 
-const EmojiCell = ({ emoji, colSize, rowNumber, ...other }) => (
+const EmojiCell = ({ emoji, colSize, columns, ...other }) => (
   <TouchableOpacity
     activeOpacity={0.5}
     style={{
       alignItems: "center",
       paddingBottom: 4,
-      width: width / rowNumber
+      width: width / columns
     }}
     {...other}
   >
@@ -191,7 +191,7 @@ export default class EmojiSelector extends Component {
       emoji={item.emoji}
       onPress={() => this.handleEmojiSelect(item.emoji)}
       colSize={this.state.colSize}
-      rowNumber={this.props.rowNumber}
+      columns={this.props.columns}
     />
   );
 
