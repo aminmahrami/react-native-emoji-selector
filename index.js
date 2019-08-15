@@ -102,10 +102,9 @@ const EmojiCell = ({ emoji, colSize, ...other }) => (
   <TouchableOpacity
     activeOpacity={0.5}
     style={{
-      flex: 1,
       alignItems: "center",
-      justifyContent: "center",
-      paddingBottom: 4
+      paddingBottom: 4,
+      width: colSize
     }}
     {...other}
   >
@@ -319,10 +318,7 @@ export default class EmojiSelector extends Component {
               <View style={styles.container}>
                 <FlatList
                   style={styles.scrollview}
-                  contentContainerStyle={{
-                    paddingBottom: colSize,
-                    justifyContent: "flex-start"
-                  }}
+                  contentContainerStyle={styles.scrollviewContainer}
                   data={this.returnSectionData()}
                   renderItem={this.renderEmojiCell}
                   horizontal={false}
@@ -409,6 +405,10 @@ const styles = StyleSheet.create({
   },
   scrollview: {
     flex: 1
+  },
+  scrollviewContainer: {
+    paddingBottom: colSize,
+    alignItems: "center"
   },
   searchbar_container: {
     width: "100%",
