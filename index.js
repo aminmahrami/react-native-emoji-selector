@@ -299,6 +299,13 @@ export default class EmojiSelector extends Component {
       </View>
     );
 
+    const Header = (
+      <React.Fragment>
+        {showSearchBar && Searchbar}
+        {showSectionTitles && <Text style={styles.sectionHeader}>{title}</Text>}
+      </React.Fragment>
+    );
+
     const title = searchQuery !== "" ? "Search Results" : category.name;
 
     return (
@@ -329,11 +336,7 @@ export default class EmojiSelector extends Component {
                   numColumns={columns}
                   keyboardShouldPersistTaps={"always"}
                   ref={scrollview => (this.scrollview = scrollview)}
-                  ListHeaderComponent={
-                    showSectionTitles && (
-                      <Text style={styles.sectionHeader}>{title}</Text>
-                    )
-                  }
+                  ListHeaderComponent={Header}
                   ListHeaderComponentStyle={styles.headerComponent}
                   removeClippedSubviews
                 />
@@ -439,6 +442,7 @@ const styles = StyleSheet.create({
     color: "#8F8F8F"
   },
   headerComponent: {
+    width: "100%",
     alignSelf: "flex-start",
     marginLeft: 5
   }
