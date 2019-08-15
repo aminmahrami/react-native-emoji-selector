@@ -416,8 +416,7 @@ const styles = StyleSheet.create({
   },
   searchbar_container: {
     width: "100%",
-    zIndex: 1,
-    backgroundColor: "rgba(255,255,255,0.75)"
+    zIndex: 1
   },
   search: {
     ...Platform.select({
