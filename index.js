@@ -319,7 +319,10 @@ export default class EmojiSelector extends Component {
               <View style={styles.container}>
                 <FlatList
                   style={styles.scrollview}
-                  contentContainerStyle={{ paddingBottom: colSize }}
+                  contentContainerStyle={{
+                    paddingBottom: colSize,
+                    justifyContent: "flex-start"
+                  }}
                   data={this.returnSectionData()}
                   renderItem={this.renderEmojiCell}
                   horizontal={false}
@@ -405,8 +408,7 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   scrollview: {
-    flex: 1,
-    justifyContent: "flex-end"
+    flex: 1
   },
   searchbar_container: {
     width: "100%",
