@@ -333,6 +333,7 @@ export default class EmojiSelector extends Component {
                       <Text style={styles.sectionHeader}>{title}</Text>
                     )
                   }
+                  ListHeaderComponentStyle={styles.headerComponent}
                   removeClippedSubviews
                 />
               </View>
@@ -435,5 +436,9 @@ const styles = StyleSheet.create({
     fontSize: 17,
     width: "100%",
     color: "#8F8F8F"
+  },
+  headerComponent: {
+    alignSelf: "flex-start",
+    marginLeft: 5
   }
 });
