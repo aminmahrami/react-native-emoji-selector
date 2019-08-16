@@ -416,7 +416,8 @@ const styles = StyleSheet.create({
   },
   searchbar_container: {
     width: "100%",
-    zIndex: 1
+    zIndex: 1,
+    marginBottom: -8
   },
   search: {
     ...Platform.select({
