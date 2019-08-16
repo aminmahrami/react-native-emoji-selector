@@ -131,12 +131,14 @@ export default class EmojiSelector extends Component {
   //
   handleTabSelect = category => {
     if (this.state.isReady) {
-      if (this.scrollview)
+      if (this.scrollview) {
         this.scrollview.scrollToOffset({ x: 0, y: 0, animated: false });
+      }
       this.setState({
         searchQuery: "",
         category
       });
+      this.props.onTabSelected(category.name);
     }
   };
 
@@ -359,6 +361,9 @@ export default class EmojiSelector extends Component {
 EmojiSelector.propTypes = {
   /** Function called when a user selects an Emoji */
   onEmojiSelected: PropTypes.func.isRequired,
+
+  /** Function called when a user selects a Tab */
+  onTabSelected: PropTypes.func,
 
   /** Theme color used for loaders and active tab indicator */
   theme: PropTypes.oneOfType([

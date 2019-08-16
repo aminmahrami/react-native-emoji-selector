@@ -15,6 +15,7 @@ declare module "react-native-emoji-selector" {
   }
   export interface EmojiSelectorProps {
     onEmojiSelected(emoji: EmojiData): void;
+    onTabSelected(tab: string): void;
     theme?: string;
     showTabs?: boolean;
     showSearchBar?: boolean;
