@@ -320,7 +320,6 @@ export default class EmojiSelector extends Component {
           )}
         </View>
         <View style={{ flex: 1 }}>
-          {showSearchBar && Searchbar}
           {isReady ? (
             <View style={{ flex: 1 }}>
               <View style={styles.container}>
