@@ -299,14 +299,14 @@ export default class EmojiSelector extends Component {
       </View>
     );
 
+    const title = searchQuery !== "" ? "Search Results" : category.name;
+
     const Header = (
       <React.Fragment>
         {showSearchBar && Searchbar}
         {showSectionTitles && <Text style={styles.sectionHeader}>{title}</Text>}
       </React.Fragment>
     );
-
-    const title = searchQuery !== "" ? "Search Results" : category.name;
 
     return (
       <View style={styles.frame} {...other} onLayout={this.handleLayout}>
