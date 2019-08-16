@@ -303,7 +303,7 @@ export default class EmojiSelector extends Component {
 
     const Header = (
       <React.Fragment>
-        {showSearchBar && Searchbar}
+        {showSearchBar && category.name !== "Recently used" && Searchbar}
         {showSectionTitles && <Text style={styles.sectionHeader}>{title}</Text>}
       </React.Fragment>
     );
