@@ -441,7 +441,6 @@ const styles = StyleSheet.create({
   },
   headerComponent: {
     width: "100%",
-    alignSelf: "flex-start",
-    marginLeft: 5
+    alignSelf: "flex-start"
   }
 });
